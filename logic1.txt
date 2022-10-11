@@ -1,0 +1,39 @@
+%dw 2.0
+output application/json
+var filterSp = (payload filter (trim($.PRODUCER_ROLE_CD) != "SP")) orderBy ($.PRODUCER_ROLE_CD)
+
+var taFilter = filterSp filter (trim($.PRODUCER_ROLE_CD) == "TA")
+var paFilter = filterSp filter (trim($.PRODUCER_ROLE_CD) == "PA")
+var saFilter = filterSp filter (trim($.PRODUCER_ROLE_CD) == "SA")
+
+var oaFilter = filterSp filter (trim($.PRODUCER_ROLE_CD) == "OA")
+
+var arFilter = filterSp filter (trim($.PRODUCER_ROLE_CD) == "AR")
+
+var abc = (
+if (sizeOf(taFilter) != 0 ) taFilter
+else if (sizeOf(paFilter) != 1 ) paFilter
+else if (sizeOf(saFilter) != 0 ) saFilter
+else if (sizeOf(oaFilter) != 0 ) oaFilter
+else if (sizeOf(arFilter) != 0 ) arFilter
+else null
+)
+
+---
+(abc map ((a,b) -> {
+    (if(a.PRODUCER_STATUS_CD as String == "1c")
+    {
+        
+    "CNT_ISS_CD": a.CNT_ISS_CD,
+    "LST_UPD_TM": a.LST_UPD_TM,
+    "CNT_ID": a.CNT_ID,
+    "PRODUCER_ROLE_CD": a.PRODUCER_ROLE_CD,
+    "SHARE_PC": a.SHARE_PC,
+    "PRODUCER_ID": a.PRODUCER_ID,
+    "CLENT_ID": a.CLENT_ID,
+    "PRODUCER_STATUS_CD": "00"
+  
+    }
+    else a)
+    
+})) orderBy (-$.PRODUCER_STATUS_CD)
