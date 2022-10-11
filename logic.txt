@@ -1,0 +1,4 @@
+Order for Role code: {"TA","PA","SA","OA","AR","SP","TA"};
+Order for Status code: {"01","02","03","04","05","1C"};
+
+Here, the service will filter the Agent who has Highest Role first. If two Agents have same Role then it will look for the Highest ranking Status code. If status code also same for both Agents, then it will filter based on Share percentage.”
