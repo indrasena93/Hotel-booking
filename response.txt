@@ -1,0 +1,112 @@
+[
+    {
+        "CNT_ISS_CD": "PNR",
+        "LST_UPD_TM": "2022-01-05T01:33:30",
+        "CNT_ID": "31524940",
+        "PRODUCER_ROLE_CD": "OA ",
+        "SHARE_PC": 100,
+        "PRODUCER_ID": "0029612",
+        "CLENT_ID": "000501753",
+        "PRODUCER_STATUS_CD": "12"
+    },
+    {
+        "CNT_ISS_CD": "PNR",
+        "LST_UPD_TM": "2022-01-05T01:33:30",
+        "CNT_ID": "31524940",
+        "PRODUCER_ROLE_CD": "PA ",
+        "SHARE_PC": null,
+        "PRODUCER_ID": "0655409",
+        "CLENT_ID": "000501753",
+        "PRODUCER_STATUS_CD": "1C"
+    },
+    {
+        "CNT_ISS_CD": "PNR",
+        "LST_UPD_TM": "2018-05-01T07:08:25",
+        "CNT_ID": "38317194",
+        "PRODUCER_ROLE_CD": "SA ",
+        "SHARE_PC": 100,
+        "PRODUCER_ID": "0032687",
+        "CLENT_ID": "000501753",
+        "PRODUCER_STATUS_CD": "01"
+    },
+    {
+        "CNT_ISS_CD": "PNR",
+        "LST_UPD_TM": "2022-09-13T23:18:45",
+        "CNT_ID": "38317194",
+        "PRODUCER_ROLE_CD": "OA ",
+        "SHARE_PC": 100,
+        "PRODUCER_ID": "0318122",
+        "CLENT_ID": "000501753",
+        "PRODUCER_STATUS_CD": "1C"
+    },
+    {
+        "CNT_ISS_CD": "PNR",
+        "LST_UPD_TM": "2018-05-01T07:08:25",
+        "CNT_ID": "38317194",
+        "PRODUCER_ROLE_CD": "SP ",
+        "SHARE_PC": 100,
+        "PRODUCER_ID": "0318122",
+        "CLENT_ID": "000501753",
+        "PRODUCER_STATUS_CD": "1C"
+    },
+    {
+        "CNT_ISS_CD": "PNR",
+        "LST_UPD_TM": "2018-05-01T07:08:25",
+        "CNT_ID": "45965871",
+        "PRODUCER_ROLE_CD": "SA ",
+        "SHARE_PC": 100,
+        "PRODUCER_ID": "0032687",
+        "CLENT_ID": "000501753",
+        "PRODUCER_STATUS_CD": "01"
+    },
+    {
+        "CNT_ISS_CD": "PNR",
+        "LST_UPD_TM": "2022-08-08T23:21:48",
+        "CNT_ID": "45965871",
+        "PRODUCER_ROLE_CD": "OA ",
+        "SHARE_PC": 100,
+        "PRODUCER_ID": "0318122",
+        "CLENT_ID": "000501753",
+        "PRODUCER_STATUS_CD": "1C"
+    },
+    {
+        "CNT_ISS_CD": "PNR",
+        "LST_UPD_TM": "2018-05-01T07:08:25",
+        "CNT_ID": "45965871",
+        "PRODUCER_ROLE_CD": "SP ",
+        "SHARE_PC": 100,
+        "PRODUCER_ID": "0318122",
+        "CLENT_ID": "000501753",
+        "PRODUCER_STATUS_CD": "1C"
+    },
+    {
+        "CNT_ISS_CD": "PNR",
+        "LST_UPD_TM": "2018-05-01T07:08:25",
+        "CNT_ID": "46877942",
+        "PRODUCER_ROLE_CD": "SA ",
+        "SHARE_PC": 100,
+        "PRODUCER_ID": "0032687",
+        "CLENT_ID": "000501753",
+        "PRODUCER_STATUS_CD": "01"
+    },
+    {
+        "CNT_ISS_CD": "PNR",
+        "LST_UPD_TM": "2022-10-06T00:01:52",
+        "CNT_ID": "46877942",
+        "PRODUCER_ROLE_CD": "OA ",
+        "SHARE_PC": 100,
+        "PRODUCER_ID": "0318122",
+        "CLENT_ID": "000501753",
+        "PRODUCER_STATUS_CD": "1C"
+    },
+    {
+        "CNT_ISS_CD": "PNR",
+        "LST_UPD_TM": "2018-05-01T07:08:25",
+        "CNT_ID": "46877942",
+        "PRODUCER_ROLE_CD": "SP ",
+        "SHARE_PC": 100,
+        "PRODUCER_ID": "0318122",
+        "CLENT_ID": "000501753",
+        "PRODUCER_STATUS_CD": "1C"
+    }
+]
