@@ -1,0 +1,27 @@
+%dw 2.0
+output application/json
+
+var role=(if(sizeOf(payload filter($.PRODUCER_ROLE_CD == "TA")) > 0) 
+
+(payload filter($.PRODUCER_ROLE_CD == "TA") map ((value, index) ->
+value 
+))
+
+else  if (sizeOf(payload filter($.PRODUCER_ROLE_CD == "PA")) > 0)
+
+(payload filter($.PRODUCER_ROLE_CD == "PA") map ((value, index) ->
+value 
+))
+
+else []) 
+
+---
+( (if(sizeOf(role filter($.PRODUCER_STATUS_CD == "01")) > 0) 
+
+role filter($.PRODUCER_STATUS_CD == "01") 
+
+else if (sizeOf(role filter($.PRODUCER_STATUS_CD == "02")) > 0)
+
+role filter($.PRODUCER_STATUS_CD == "02") 
+
+else null)  orderBy($.temp default ""))[-1]
