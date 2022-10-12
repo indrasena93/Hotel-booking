@@ -1,4 +1,52 @@
-Order for Role code: {"TA","PA","SA","OA","AR","SP","TA"};
-Order for Status code: {"01","02","03","04","05","1C"};
+%dw 2.0
+output application/json
+---
+//Mule::p("secure::query")
 
-Here, the service will filter the Agent who has Highest Role first. If two Agents have same Role then it will look for the Highest ranking Status code. If status code also same for both Agents, then it will filter based on Share percentage.”
+"SELECT A.MK_ID AS PRODUCER_ID,
+       A.MK_RL_CD AS PRODUCER_ROLE_CD,
+       F.STS_TP_CD AS PRODUCER_STATUS_CD,
+       ('"+payload[0]+"') AS CLENT_ID,
+       A.CNT_ID,
+       A.CNT_ISS_CD,
+       A.CPN_MK_SPL_PC AS SHARE_PC,
+       A.LST_UPD_TM
+  FROM cn0101.CTCP_MK_RL A,
+       cn0101.CTCP_MK_RL_TP B,
+       cn0101.CTCP_TP C,
+       cn0101.CONTRACT D,
+       co0101.CONROL E,
+       mkrd01.MK_STATUS_ATV F
+WHERE     E.CL_ID = ('"+payload[0]+"')
+       AND A.CNT_ID = E.CNT_ID(+)
+       AND A.CNT_ISS_CD = E.CNT_ISS_TP_CD(+)
+       AND A.CNT_ID = D.CNT_ID(+)
+       AND A.CNT_ISS_CD = D.CNT_ISS_CD(+)
+       AND A.DAT_SRC_CD = D.DAT_SRC_CD(+)
+       AND A.DAT_SRC_CD = B.DAT_SRC_CD(+)
+       AND A.MK_RL_CD = B.MK_RL_CD(+)
+       AND A.CTCP_CD = C.CTCP_CD(+)
+       AND A.MK_ID = F.MARKETER_ID
+       AND F.STS_EDT <= SYSDATE
+       AND F.STS_XDT >= SYSDATE
+UNION
+SELECT A.PRODUCER_ID,
+       A.PRODUCER_ROLE_CD,
+       F.STS_TP_CD AS PRODUCER_STATUS_CD,
+       ('"+payload[0]+"') AS CLIENT_ID,
+       C.CNT_ID,
+       C.CNT_ISS_CD,
+       A.PRODUCER_ACCOUNT_SHARE_PC AS SHARE_PC,
+       A.LST_UPD_TM
+  FROM cn0101.PRODUCER_ACCOUNT_ROLE A,
+       cn0101.ACCOUNT C,
+       co0101.CONROL E,
+       mkrd01.MK_STATUS_ATV F
+WHERE     E.CL_ID = ('"+payload[0]+"')
+       AND C.CNT_ID = E.CNT_ID(+)
+       AND C.CNT_ISS_CD = E.CNT_ISS_TP_CD(+)
+       AND C.ACCOUNT_ID = A.ACCOUNT_ID(+)
+       AND A.PRODUCER_ID = F.MARKETER_ID
+       AND F.STS_EDT <= SYSDATE
+       AND F.STS_XDT >= SYSDATE
+ORDER BY CNT_ID"
