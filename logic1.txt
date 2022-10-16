@@ -1,39 +1,33 @@
 %dw 2.0
 output application/json
-var filterSp = (payload filter (trim($.PRODUCER_ROLE_CD) != "SP")) orderBy ($.PRODUCER_ROLE_CD)
 
-var taFilter = filterSp filter (trim($.PRODUCER_ROLE_CD) == "TA")
-var paFilter = filterSp filter (trim($.PRODUCER_ROLE_CD) == "PA")
-var saFilter = filterSp filter (trim($.PRODUCER_ROLE_CD) == "SA")
+var role=(if(sizeOf(payload filter(trim($.PRODUCER_STATUS_CD) == "01")) > 0) 
 
-var oaFilter = filterSp filter (trim($.PRODUCER_ROLE_CD) == "OA")
+(payload filter(trim($.PRODUCER_STATUS_CD) == "01") map ((value, index) -> value )) 
 
-var arFilter = filterSp filter (trim($.PRODUCER_ROLE_CD) == "AR")
+else if(sizeOf(payload filter(trim($.PRODUCER_STATUS_CD) == "04")) > 0) 
 
-var abc = (
-if (sizeOf(taFilter) != 0 ) taFilter
-else if (sizeOf(paFilter) != 1 ) paFilter
-else if (sizeOf(saFilter) != 0 ) saFilter
-else if (sizeOf(oaFilter) != 0 ) oaFilter
-else if (sizeOf(arFilter) != 0 ) arFilter
-else null
-)
+(payload filter(trim($.PRODUCER_STATUS_CD) == "04") map ((value, index) -> value ))
 
+else if(sizeOf(payload filter(trim($.PRODUCER_STATUS_CD) == "1C")) > 0) 
+
+(payload filter(trim($.PRODUCER_STATUS_CD) == "1C") map ((value, index) -> value ))
+
+else [])
 ---
-(abc map ((a,b) -> {
-    (if(a.PRODUCER_STATUS_CD as String == "1c")
-    {
-        
-    "CNT_ISS_CD": a.CNT_ISS_CD,
-    "LST_UPD_TM": a.LST_UPD_TM,
-    "CNT_ID": a.CNT_ID,
-    "PRODUCER_ROLE_CD": a.PRODUCER_ROLE_CD,
-    "SHARE_PC": a.SHARE_PC,
-    "PRODUCER_ID": a.PRODUCER_ID,
-    "CLENT_ID": a.CLENT_ID,
-    "PRODUCER_STATUS_CD": "00"
-  
-    }
-    else a)
-    
-})) orderBy (-$.PRODUCER_STATUS_CD)
+( (if(sizeOf(role filter(trim($.PRODUCER_ROLE_CD) == "TA")) > 0) 
+role filter(trim($.PRODUCER_ROLE_CD) == "TA") 
+
+else if (sizeOf(role filter(trim($.PRODUCER_ROLE_CD) == "PA")) > 0)
+role filter(trim($.PRODUCER_ROLE_CD) == "PA") 
+
+else if (sizeOf(role filter(trim($.PRODUCER_ROLE_CD) == "SA")) > 0)
+role filter(trim($.PRODUCER_ROLE_CD) == "SA")
+
+else if (sizeOf(role filter(trim($.PRODUCER_ROLE_CD) == "OA")) > 0)
+role filter(trim($.PRODUCER_ROLE_CD) == "OA")
+
+else if (sizeOf(role filter(trim($.PRODUCER_ROLE_CD) == "AR")) > 0)
+role filter(trim($.PRODUCER_ROLE_CD) == "AR") 
+
+else null)  orderBy($.SHARE_PC default ""))[-1]
