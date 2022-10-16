@@ -31,3 +31,15 @@ else if (sizeOf(role filter(trim($.PRODUCER_ROLE_CD) == "AR")) > 0)
 role filter(trim($.PRODUCER_ROLE_CD) == "AR") 
 
 else null)  orderBy($.SHARE_PC default ""))[-1]
+
+
+
+
+
+%dw 2.0
+output application/json
+//var date1 = payload.LST_UPD_TM
+//var date2 = (now()-(payload.LST_UPD_TM)) //as Number {unit: "days"}) <= 730)
+---
+
+if((((now()-(payload.LST_UPD_TM)) as Number {unit: "days"}) <= 730) ~= "true") payload else null
