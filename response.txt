@@ -1,112 +1,60 @@
-[
-    {
-        "CNT_ISS_CD": "PNR",
-        "LST_UPD_TM": "2022-01-05T01:33:30",
-        "CNT_ID": "31524940",
-        "PRODUCER_ROLE_CD": "OA ",
-        "SHARE_PC": 100,
-        "PRODUCER_ID": "0029612",
-        "CLENT_ID": "000501753",
-        "PRODUCER_STATUS_CD": "12"
+{
+    "0": {
+        "inboundAttachmentNames": [],
+        "exceptionPayload": null,
+        "inboundPropertyNames": [],
+        "outboundAttachmentNames": [],
+        "outboundPropertyNames": [],
+        "payload": [
+            {
+                "ABBREV_LGL_NM": "FEOLA CLU,FRANK J              ",
+                "EXPENSE_ALLOWANCE_PROGRAM_CD": null,
+                "MARKETER_ID": "0655409",
+                "NPN_NO": "0000362802",
+                "EMP_ST_CD": "OH",
+                "REGISTERED_CRD_NO": "0001072564",
+                "CLASS_CD": "05",
+                "FIN_TP_CD": "U  ",
+                "LAST_PROCESS_DT": "2022-09-30T00:00:00",
+                "AGT_FYC_PROD_DECILE_NO": null,
+                "BRTH_DT": "1950-11-21T00:00:00",
+                "PRF_MAIL_DESC": "RESIDENCE",
+                "U4_SUBMIT_DT": "2004-01-01T00:00:00",
+                "FIN_NO": "211364894",
+                "DETACH_AGT_CD": "Y",
+                "SEX_CD": "M"
+            }
+        ],
+        "attributes": null
     },
-    {
-        "CNT_ISS_CD": "PNR",
-        "LST_UPD_TM": "2022-01-05T01:33:30",
-        "CNT_ID": "31524940",
-        "PRODUCER_ROLE_CD": "PA ",
-        "SHARE_PC": null,
-        "PRODUCER_ID": "0655409",
-        "CLENT_ID": "000501753",
-        "PRODUCER_STATUS_CD": "1C"
+    "1": {
+        "inboundAttachmentNames": [],
+        "exceptionPayload": null,
+        "inboundPropertyNames": [],
+        "outboundAttachmentNames": [],
+        "outboundPropertyNames": [],
+        "payload": [
+            {
+                "STS_TP_CD": "01"
+            }
+        ],
+        "attributes": null
     },
-    {
-        "CNT_ISS_CD": "PNR",
-        "LST_UPD_TM": "2018-05-01T07:08:25",
-        "CNT_ID": "38317194",
-        "PRODUCER_ROLE_CD": "SA ",
-        "SHARE_PC": 100,
-        "PRODUCER_ID": "0032687",
-        "CLENT_ID": "000501753",
-        "PRODUCER_STATUS_CD": "01"
-    },
-    {
-        "CNT_ISS_CD": "PNR",
-        "LST_UPD_TM": "2022-09-13T23:18:45",
-        "CNT_ID": "38317194",
-        "PRODUCER_ROLE_CD": "OA ",
-        "SHARE_PC": 100,
-        "PRODUCER_ID": "0318122",
-        "CLENT_ID": "000501753",
-        "PRODUCER_STATUS_CD": "1C"
-    },
-    {
-        "CNT_ISS_CD": "PNR",
-        "LST_UPD_TM": "2018-05-01T07:08:25",
-        "CNT_ID": "38317194",
-        "PRODUCER_ROLE_CD": "SP ",
-        "SHARE_PC": 100,
-        "PRODUCER_ID": "0318122",
-        "CLENT_ID": "000501753",
-        "PRODUCER_STATUS_CD": "1C"
-    },
-    {
-        "CNT_ISS_CD": "PNR",
-        "LST_UPD_TM": "2018-05-01T07:08:25",
-        "CNT_ID": "45965871",
-        "PRODUCER_ROLE_CD": "SA ",
-        "SHARE_PC": 100,
-        "PRODUCER_ID": "0032687",
-        "CLENT_ID": "000501753",
-        "PRODUCER_STATUS_CD": "01"
-    },
-    {
-        "CNT_ISS_CD": "PNR",
-        "LST_UPD_TM": "2022-08-08T23:21:48",
-        "CNT_ID": "45965871",
-        "PRODUCER_ROLE_CD": "OA ",
-        "SHARE_PC": 100,
-        "PRODUCER_ID": "0318122",
-        "CLENT_ID": "000501753",
-        "PRODUCER_STATUS_CD": "1C"
-    },
-    {
-        "CNT_ISS_CD": "PNR",
-        "LST_UPD_TM": "2018-05-01T07:08:25",
-        "CNT_ID": "45965871",
-        "PRODUCER_ROLE_CD": "SP ",
-        "SHARE_PC": 100,
-        "PRODUCER_ID": "0318122",
-        "CLENT_ID": "000501753",
-        "PRODUCER_STATUS_CD": "1C"
-    },
-    {
-        "CNT_ISS_CD": "PNR",
-        "LST_UPD_TM": "2018-05-01T07:08:25",
-        "CNT_ID": "46877942",
-        "PRODUCER_ROLE_CD": "SA ",
-        "SHARE_PC": 100,
-        "PRODUCER_ID": "0032687",
-        "CLENT_ID": "000501753",
-        "PRODUCER_STATUS_CD": "01"
-    },
-    {
-        "CNT_ISS_CD": "PNR",
-        "LST_UPD_TM": "2022-10-06T00:01:52",
-        "CNT_ID": "46877942",
-        "PRODUCER_ROLE_CD": "OA ",
-        "SHARE_PC": 100,
-        "PRODUCER_ID": "0318122",
-        "CLENT_ID": "000501753",
-        "PRODUCER_STATUS_CD": "1C"
-    },
-    {
-        "CNT_ISS_CD": "PNR",
-        "LST_UPD_TM": "2018-05-01T07:08:25",
-        "CNT_ID": "46877942",
-        "PRODUCER_ROLE_CD": "SP ",
-        "SHARE_PC": 100,
-        "PRODUCER_ID": "0318122",
-        "CLENT_ID": "000501753",
-        "PRODUCER_STATUS_CD": "1C"
+    "2": {
+        "inboundAttachmentNames": [],
+        "exceptionPayload": null,
+        "inboundPropertyNames": [],
+        "outboundAttachmentNames": [],
+        "outboundPropertyNames": [],
+        "payload": [
+            {
+                "TTL_EDT": "1976-04-05T00:00:00",
+                "LAST_PROCESS_DT": "2022-09-30T00:00:00",
+                "MARKETER_ID": "0655409",
+                "TTL_XDT": "9999-12-31T00:00:00",
+                "TTL_TP_CD": "0A"
+            }
+        ],
+        "attributes": null
     }
-]
+}
