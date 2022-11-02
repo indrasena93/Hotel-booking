@@ -1,5 +1,7 @@
-License Number: 293-67534
+keytool -genkey -alias nylMule -keyalg RSA -keypass mylMule -storepass nylMule -keystore keystore.jks
 
+keytool -export -alias nylMule -storepass nylMule -file server.cer -keystore keystore.jks
 
-Toad for Oracle Trial License Key: DNFLNF0X5ASVM22VVM3XWD7VDYZ6AZ515VLWN-293-67534-A5
+keytool -import -v -trustcacerts -alias nylMule -file server.cer -keystore cacerts.jks -keypass nylMule -storepass nylMule
 
+keytool -import -file server.cer -alias nylMule -keystore myTrustStore.jks
