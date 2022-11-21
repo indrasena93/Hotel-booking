@@ -1,7 +1,16 @@
-keytool -genkey -alias nylMule -keyalg RSA -keypass mylMule -storepass nylMule -keystore keystore.jks
-
-keytool -export -alias nylMule -storepass nylMule -file server.cer -keystore keystore.jks
-
-keytool -import -v -trustcacerts -alias nylMule -file server.cer -keystore cacerts.jks -keypass nylMule -storepass nylMule
-
-keytool -import -file server.cer -alias nylMule -keystore myTrustStore.jks
+<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:prod="http://newyorklife.com/services/businessdomain/relationshipmanagement/producerassignment" xmlns:prod1="http://newyorklife.com/services/businessdomain/relationshipmanagement/producerrelationshiprequestsresponses">
+    <soapenv:Header>
+        <wsse:Security soap:mustUnderstand="0" xmlns:soap="http://schemas.xmlsoap.org/soap/envelope/" xmlns:wsse="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-secext-1.0.xsd" xmlns:wsu="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-utility-1.0.xsd">
+            <wsse:UsernameToken>
+                <wsse:Username>SDCCAdminID</wsse:Username>
+                <wsse:Password>sDmdA8901</wsse:Password>
+            </wsse:UsernameToken>
+        </wsse:Security>
+    </soapenv:Header>
+    <soapenv:Body>
+        <prod:AssignProducerByClientIDRequest>
+            <prod1:ClientId>000501753</prod1:ClientId>
+        </prod:AssignProducerByClientIDRequest>
+    </soapenv:Body>
+    <prod:AssignProducerByClientIDRequest/>
+</soapenv:Envelope>
