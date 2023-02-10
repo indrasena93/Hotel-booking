@@ -1,16 +1,102 @@
-<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:prod="http://newyorklife.com/services/businessdomain/relationshipmanagement/producerassignment" xmlns:prod1="http://newyorklife.com/services/businessdomain/relationshipmanagement/producerrelationshiprequestsresponses">
-    <soapenv:Header>
-        <wsse:Security soap:mustUnderstand="0" xmlns:soap="http://schemas.xmlsoap.org/soap/envelope/" xmlns:wsse="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-secext-1.0.xsd" xmlns:wsu="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-utility-1.0.xsd">
-            <wsse:UsernameToken>
-                <wsse:Username>SDCCAdminID</wsse:Username>
-                <wsse:Password>sDmdA8901</wsse:Password>
-            </wsse:UsernameToken>
-        </wsse:Security>
-    </soapenv:Header>
-    <soapenv:Body>
-        <prod:AssignProducerByClientIDRequest>
-            <prod1:ClientId>000501753</prod1:ClientId>
-        </prod:AssignProducerByClientIDRequest>
-    </soapenv:Body>
-    <prod:AssignProducerByClientIDRequest/>
-</soapenv:Envelope>
+[
+    {
+        "originAddresses": [
+            "92 Erb St E, Waterloo, ON N2J 1M1, Canada"
+        ],
+        "destinationAddresses": [
+            "855-573 Landry Rd, Rockland, ON K4K 1K7, Canada"
+        ],
+        "rows": [
+            {
+                "elements": [
+                    {
+                        "status": "OK",
+                        "duration": {
+                            "inSeconds": 20021,
+                            "humanReadable": "5 hours 34 mins"
+                        },
+                        "distance": {
+                            "inMeters": 587064,
+                            "humanReadable": "587 km"
+                        }
+                    }
+                ]
+            }
+        ]
+    },
+    {
+        "originAddresses": [
+            "2305 Fairport Rd, Pickering, ON L1V 2P9, Canada"
+        ],
+        "destinationAddresses": [
+            "855-573 Landry Rd, Rockland, ON K4K 1K7, Canada"
+        ],
+        "rows": [
+            {
+                "elements": [
+                    {
+                        "status": "OK",
+                        "duration": {
+                            "inSeconds": 15831,
+                            "humanReadable": "4 hours 24 mins"
+                        },
+                        "distance": {
+                            "inMeters": 457109,
+                            "humanReadable": "457 km"
+                        }
+                    }
+                ]
+            }
+        ]
+    },
+    {
+        "originAddresses": [
+            "6755-6787 Oldfield Rd, Niagara Falls, ON L2G 3J8, Canada"
+        ],
+        "destinationAddresses": [
+            "855-573 Landry Rd, Rockland, ON K4K 1K7, Canada"
+        ],
+        "rows": [
+            {
+                "elements": [
+                    {
+                        "status": "OK",
+                        "duration": {
+                            "inSeconds": 21015,
+                            "humanReadable": "5 hours 50 mins"
+                        },
+                        "distance": {
+                            "inMeters": 619794,
+                            "humanReadable": "620 km"
+                        }
+                    }
+                ]
+            }
+        ]
+    },
+    {
+        "originAddresses": [
+            "701 Wyandotte St E, Windsor, ON N9A 3J5, Canada"
+        ],
+        "destinationAddresses": [
+            "855-573 Landry Rd, Rockland, ON K4K 1K7, Canada"
+        ],
+        "rows": [
+            {
+                "elements": [
+                    {
+                        "status": "OK",
+                        "duration": {
+                            "inSeconds": 29016,
+                            "humanReadable": "8 hours 4 mins"
+                        },
+                        "distance": {
+                            "inMeters": 847364,
+                            "humanReadable": "847 km"
+                        }
+                    }
+                ]
+            }
+        ]
+    }
+]
