@@ -1,60 +1,16 @@
 {
-    "0": {
-        "inboundAttachmentNames": [],
-        "exceptionPayload": null,
-        "inboundPropertyNames": [],
-        "outboundAttachmentNames": [],
-        "outboundPropertyNames": [],
-        "payload": [
-            {
-                "ABBREV_LGL_NM": "FEOLA CLU,FRANK J              ",
-                "EXPENSE_ALLOWANCE_PROGRAM_CD": null,
-                "MARKETER_ID": "0655409",
-                "NPN_NO": "0000362802",
-                "EMP_ST_CD": "OH",
-                "REGISTERED_CRD_NO": "0001072564",
-                "CLASS_CD": "05",
-                "FIN_TP_CD": "U  ",
-                "LAST_PROCESS_DT": "2022-09-30T00:00:00",
-                "AGT_FYC_PROD_DECILE_NO": null,
-                "BRTH_DT": "1950-11-21T00:00:00",
-                "PRF_MAIL_DESC": "RESIDENCE",
-                "U4_SUBMIT_DT": "2004-01-01T00:00:00",
-                "FIN_NO": "211364894",
-                "DETACH_AGT_CD": "Y",
-                "SEX_CD": "M"
-            }
-        ],
-        "attributes": null
-    },
-    "1": {
-        "inboundAttachmentNames": [],
-        "exceptionPayload": null,
-        "inboundPropertyNames": [],
-        "outboundAttachmentNames": [],
-        "outboundPropertyNames": [],
-        "payload": [
-            {
-                "STS_TP_CD": "01"
-            }
-        ],
-        "attributes": null
-    },
-    "2": {
-        "inboundAttachmentNames": [],
-        "exceptionPayload": null,
-        "inboundPropertyNames": [],
-        "outboundAttachmentNames": [],
-        "outboundPropertyNames": [],
-        "payload": [
-            {
-                "TTL_EDT": "1976-04-05T00:00:00",
-                "LAST_PROCESS_DT": "2022-09-30T00:00:00",
-                "MARKETER_ID": "0655409",
-                "TTL_XDT": "9999-12-31T00:00:00",
-                "TTL_TP_CD": "0A"
-            }
-        ],
-        "attributes": null
-    }
+  "Content": "\" {     \"nyl.cloud.security.jwt.audience\": \"firsthokagehashiramasenju\",     \"nyl.cloud.security.jwt.expiration-in-seconds\": \"1800\",     \"nyl.cloud.security.jwt.expirationInSeconds\": \"1800\",     \"nyl.cloud.security.jwt.secret\": \"devwaeblccdoemfeg\" }\"",
+  "CreationMethod": "PVWA",
+  "App_Name": "Client Prospecting AWS Integration Application",
+  "Address": "nyl.cloud.security.jwt.dev",
+  "SysID": "APP-13918",
+  "Safe": "SVC_APP13918",
+  "Category": "PAM1.0",
+  "Name": "Misc-NYLMulesoftClientSecrets-nyl.cloud.security.jwt.dev-nyl.cloud.security.jwt.dev",
+  "UserName": "nyl.cloud.security.jwt.dev",
+  "PolicyID": "NYLMulesoftClientSecrets",
+  "DeviceType": "Misc",
+  "CPMDisabled": "No Reason",
+  "Folder": "Root",
+  "PasswordChangeInProcess": "False"
 }
